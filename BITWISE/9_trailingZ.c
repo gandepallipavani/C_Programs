@@ -7,11 +7,11 @@ int main()
 	for(i=0;i<32;i++)
 	{
 		if((n>>i)& 1)
-			count=i;
+		{
+			break;
+		}
+		count++;
 	}
-	if(count)
-		printf("Highest order set bit in %d is::: %d",n,count);
-	else
-		printf("number is 0");
+	printf("Highest order set bit in %d is::: %d",n,count);
 	return 0;
 }
